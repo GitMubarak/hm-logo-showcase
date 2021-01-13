@@ -1,0 +1,55 @@
+.hmls-logo-main-wrapper {
+    border: 0px solid #000;
+    display: grid;
+    grid-gap: 0px;
+    padding: 0px;
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.hmls-logo-main-wrapper .hmls-logo-item {
+    border: 1px solid #DDD;
+    min-height: 150px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); */
+    transition: box-shadow 0.3s ease-in-out;
+    text-align: center;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.hmls-logo-main-wrapper .hmls-logo-item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    -ms-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+    z-index: 99;
+    background: #ffffff;
+}
+
+.hmls-logo-main-wrapper .hmls-logo-item img {
+    border: 0px solid #FF0000;
+    display: block;
+    position: relative;
+    right: 20px;
+    top: 50%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 500px) {
+    .hmls-logo-main-wrapper {
+        display: block;
+    }
+    .hmls-logo-main-wrapper .hmls-logo-item img {
+        display: block;
+        position: relative;
+        top: 0%;
+        right: -50%;
+        transform: translate(-50%, 40%);
+    }
+}
