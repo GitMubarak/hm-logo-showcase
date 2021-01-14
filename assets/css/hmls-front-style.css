@@ -31,7 +31,13 @@
     background: #ffffff;
 }
 
-.hmls-logo-main-wrapper .hmls-logo-item img {
+.hmls-logo-main-wrapper>.hmls-logo-item>a {
+    text-decoration: none !important;
+    outline: none !important;
+    border: none !important;
+}
+
+.hmls-logo-main-wrapper>.hmls-logo-item>a>img {
     border: 0px solid #FF0000;
     display: block;
     position: relative;
@@ -39,17 +45,17 @@
     top: 50%;
     right: -50%;
     transform: translate(-50%, -50%);
+    height: 150px;
 }
 
 @media only screen and (max-width: 500px) {
     .hmls-logo-main-wrapper {
         display: block;
     }
-    .hmls-logo-main-wrapper .hmls-logo-item img {
+    .hmls-logo-main-wrapper>.hmls-logo-item>a>img {
         display: block;
         position: relative;
-        top: 0%;
-        right: -50%;
-        transform: translate(-50%, 40%);
+        transform: translate(-50%, 0%);
+        height: 150px;
     }
 }

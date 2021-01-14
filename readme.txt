@@ -15,6 +15,7 @@ This HM Logo Showcase is a logo manager plugin which will display client/brand l
 
 This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase].
 
+
 **🌟 Plugin Features:**
 
 * Easy to install
@@ -24,6 +25,9 @@ This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin w
 * Simple but effective
 * Custom Post Type
 * Unlimited Logos
+* Logo Url Option
+* Logo Status Active/Inactive Option
+* Category wise logo display option
 
 
 ➡️ Useage of Shortcode:⬅️
@@ -31,6 +35,10 @@ This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin w
 <strong> Use the below Shortcode to display Logos on your page </strong>
 
 <pre> [hm_logo_showcase] </pre>
+
+<strong> Display Logo from a category </strong>
+
+<pre> [hm_logo_showcase category="category-slug-here"] </pre>
 
 
 
@@ -95,7 +103,11 @@ Please go to Admin -> HM Logos menu and Add your Logo. Copy the Shorcode [hm_log
 == Changelog ==
 
 = 1.1 =
-* Initial release
+* Logo url option added
+* Category wise logo display option added to shortcode
+* Logo image meta box added
+* Logo status option modified from select to radio
+* Image responsive issue fixed for mobile
 
 = 1.0 =
 * Initial release

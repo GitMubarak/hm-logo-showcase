@@ -33,7 +33,7 @@ class HMLS_Front {
 		add_shortcode( 'hm_logo_showcase', array( $this, 'hmls_load_shortcode_view' ) );
 	}
 
-	function hmls_load_shortcode_view() {
+	function hmls_load_shortcode_view( $hmlsAttr ) {
 
 		$output = '';
 		ob_start();

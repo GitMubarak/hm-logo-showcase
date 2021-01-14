@@ -34,6 +34,8 @@ class HMLS_Master {
 		$this->hmls_loader->add_action('save_post', $hmls_admin, HMLS_PRFX . 'save_meta_value', 1, 1);
 		$this->hmls_loader->add_action('admin_menu', $hmls_admin, HMLS_PRFX . 'admin_menu', 0);
 		$this->hmls_loader->add_action('admin_init', $hmls_admin, HMLS_PRFX . 'flush_rewrite');
+		// Change the featured image metabox link text
+		$this->hmls_loader->add_filter('admin_post_thumbnail_html', $hmls_admin, HMLS_PRFX . 'change_featured_image_link_text');
 	}
 
 	function hmls_trigger_front_hooks() {

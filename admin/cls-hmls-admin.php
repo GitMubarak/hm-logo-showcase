@@ -78,7 +78,7 @@ class HMLS_Admin
 							'all_items'           => __('All Logos'),
 							'view_item'           => __('View Logo'),
 							'add_new_item'        => __('Add New Logo'),
-							'add_new'             => __('Add New'),
+							'add_new'             => __('Add New Logo'),
 							'edit_item'           => __('Edit Logo'),
 							'update_item'         => __('Update Logo'),
 							'search_items'        => __('Search Logo'),
@@ -136,30 +136,59 @@ class HMLS_Admin
 	function hmls_metaboxes() {
 		add_meta_box(
 			'hmls_metaboxes',
-			'HM Logo Details',
+			__( 'Logo Information', HMLS_TXT_DOMAIN ), 
 			array( $this, HMLS_PRFX . 'metabox_content' ),
 			'hmls_logo',
 			'normal',
 			'high'
 		);
+
+		// Changing Featured Image Text
+		remove_meta_box( 'postimagediv', 'hmls_logo', 'side' );
+		add_meta_box( 
+			'postimagediv', 
+			__( 'Logo Image', HMLS_TXT_DOMAIN ), 
+			'post_thumbnail_meta_box', 
+			'hmls_logo', 
+			'normal', 
+			'high' 
+		);
+	}
+
+	function hmls_change_featured_image_link_text( $content ) {
+		if ( 'hmls_logo' === get_post_type() ) {
+			$content = str_replace( 'Set featured image', __( 'Set Logo Image Here', HMLS_TXT_DOMAIN ), $content );
+			$content = str_replace( 'Remove featured image', __( 'Remove Logo Image Here', HMLS_TXT_DOMAIN ), $content );
+		}
+		return $content;
 	}
 
 	function hmls_metabox_content() {
 		
 		global $post;
 		wp_nonce_field( basename(__FILE__), 'hmls_fields' );
+		$hmls_logo_url	= get_post_meta( $post->ID, 'hmls_logo_url', true );
 		$hmls_status	= get_post_meta( $post->ID, 'hmls_status', true );
 		?>
 		<table class="form-table">
+			<tr class="hmls_logo_url">
+				<th scope="row">
+					<label for="hmls_logo_url"><?php esc_html_e('Logo Url:', HMLS_TXT_DOMAIN); ?></label>
+				</th>
+				<td>
+					<input type="text" name="hmls_logo_url" value="<?php echo esc_attr( $hmls_logo_url ); ?>" placeholder="<?php esc_attr_e( 'e.g: http://hmplugin.com', HMLS_TXT_DOMAIN ); ?>" class="regular-text ltr">
+				</td>
+			</tr>
 			<tr class="hmls_status">
 				<th scope="row">
 					<label for="hmls_status"><?php esc_html_e('Status:', HMLS_TXT_DOMAIN); ?></label>
 				</th>
 				<td>
-					<select name="hmls_status" class="small-text">
-						<option value="active" <?php if ( 'inactive' != esc_attr( $hmls_status ) ) echo 'selected'; ?> ><?php esc_html_e('Active', HMLS_TXT_DOMAIN); ?></option>
-						<option value="inactive" <?php if ( 'inactive' == esc_attr( $hmls_status ) ) echo 'selected'; ?> ><?php esc_html_e('Inactive', HMLS_TXT_DOMAIN); ?></option>
-					</select>
+					<input type="radio" name="hmls_status" class="hmls_status" value="active" <?php echo ( 'inactive' !== $hmls_status ) ? 'checked' : ''; ?> >
+					<label for="hmls_status_active"><span></span><?php esc_html_e( 'Active', HMLS_TXT_DOMAIN ); ?></label>
+						&nbsp;&nbsp;
+					<input type="radio" name="hmls_status" class="hmls_status" value="inactive" <?php echo ( 'inactive' === $hmls_status ) ? 'checked' : ''; ?> >
+					<label for="hmls_status_inactive"><span></span><?php esc_html_e( 'Inactive', HMLS_TXT_DOMAIN ); ?></label>
 				</td>
 			</tr>
 		</table>
@@ -181,19 +210,20 @@ class HMLS_Admin
 			return $post_id;
 		}
 
+		$hmls_meta['hmls_logo_url']	= ( sanitize_text_field( $_POST['hmls_logo_url'] ) != '' ) ? sanitize_text_field( $_POST['hmls_logo_url'] ) : '';
 		$hmls_meta['hmls_status']	= ( sanitize_text_field( $_POST['hmls_status'] ) != '' ) ? sanitize_text_field( $_POST['hmls_status'] ) : '';
 
 		foreach( $hmls_meta as $key => $value ) {
 			if ('revision' === $post->post_type) {
 				return;
 			}
-			if (get_post_meta($post_id, $key, false)) {
-				update_post_meta($post_id, $key, $value);
+			if ( get_post_meta( $post_id, $key, false ) ) {
+				update_post_meta( $post_id, $key, $value );
 			} else {
-				add_post_meta($post_id, $key, $value);
+				add_post_meta( $post_id, $key, $value );
 			}
-			if (!$value) {
-				delete_post_meta($post_id, $key);
+			if ( ! $value ) {
+				delete_post_meta( $post_id, $key );
 			}
 		}
 	}
