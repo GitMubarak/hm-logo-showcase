@@ -44,20 +44,21 @@ If you find this plugin helpful, feel free to give us your valuable review. Rate
 
 **🔥 Other Plugins from [HM Plugin](http://www.hossnimubarak.com)**
 
-👉 [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines Widget Plugin
-👉 [WP Top News](https://wordpress.org/plugins/wp-top-news/) Top News, Breaking News, Headlines Shortcoded Plugin
-👉 [Tiny Bar](https://wordpress.org/plugins/tiny-bar/) Display a bar with a message and button at the Top or Bottom of your page
-👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) Display Books Gallery with shortcoded
-👉 [WordPress Stripe Donation](https://wordpress.org/plugins/wp-stripe-donation/) This plugin allows you to collect donations via Stripe
-👉 [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin widget to display author info
-👉 [HM Resume Manager](https://wordpress.org/plugins/hm-resume-manager/) A resume manager plugin
-👉 [HM Product Catalog](https://wordpress.org/plugins/hm-product-catalog/) A product catalog plugin
-👉 [HM Wc Product Advertiser](https://wordpress.org/plugins/hm-wc-product-advertiser/) Wocommerce Product Advertiser
+👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) Books Gallery Plugin for WordPress
+👉 [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines Widget Plugin for WordPress
+👉 [WP Top News](https://wordpress.org/plugins/wp-top-news/) Top News, Breaking News, Headlines Shortcoded Plugin for WordPress
+👉 [WordPress Stripe Donation](https://wordpress.org/plugins/wp-stripe-donation/) Donations Coolection Plugin for WordPress using Stripe Payement
+👉 [Tiny Bar](https://wordpress.org/plugins/tiny-bar/) Message Bar Plugin for WordPress to display Message at Top/Bottom Bar of a web page
+👉 [HM – Cool Author Box](https://wordpress.org/plugins/hm-cool-author-box-widget/) Author Box plugin for WordPress to display author info
+👉 [HM Resume Manager](https://wordpress.org/plugins/hm-resume-manager/) A Resume/CV Manager Plugin for WordPress
+👉 [HM Product Catalog](https://wordpress.org/plugins/hm-product-catalog/) A Product Catalog Plugin for WordPress
+👉 [HM Wc Product Advertiser](https://wordpress.org/plugins/hm-wc-product-advertiser/) Product Advertiser Plugin for Wocommerce
 👉 [WP Scroll To Post](https://wordpress.org/plugins/wp-scroll-to-post/) Display random post(Single) at the bottom right corner
-👉 [HM Recent Posts Widget](https://wordpress.org/plugins/hm-recent-posts-widget/) Ticker Post plugin
-👉 [WP Alert Bars](https://wordpress.org/plugins/wp-alert-bars/) Notification/Alert box Plugin in Post/Page
-👉 [FaceBook LikeBox](https://wordpress.org/plugins/hm-simple-facebook-page/) A FaceBook LikeBox Widget
-👉 [HM Logo Showcase](https://wordpress.org/plugins/wp-display-faq/) Display FAQs in your page
+👉 [HM Recent Posts Widget](https://wordpress.org/plugins/hm-recent-posts-widget/) Ticker Post plugin for WordPress
+👉 [WP Alert Bars](https://wordpress.org/plugins/wp-alert-bars/) Notification/Alert box Plugin for WordPress
+👉 [FaceBook LikeBox](https://wordpress.org/plugins/hm-simple-facebook-page/) A FaceBook LikeBox Plugin for WordPress
+👉 [WP Display FAQ](https://wordpress.org/plugins/wp-display-faq/) FAQs manager plugin for WordPress
+👉 [HM Logo Showcase](https://wordpress.org/plugins/hm-logo-showcase/) Logo manager plugin for WordPress
 
 
 == Installation ==
