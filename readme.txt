@@ -1,7 +1,7 @@
 === HM Logo Showcase ===
 Contributors: mhmrajib
 Donate link: https://www.paypal.me/mhmrajib
-Tags: faq, accordion, woocommerce faq, faq plugin, toggle
+Tags: logo, logo showcase, sponsors, brand logo, logo slider
 Requires at least: 4.6
 Tested up to: 5.6
 Stable tag: 1.0
