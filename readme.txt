@@ -9,11 +9,11 @@ Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-This HM Logo Showcase plugin will display Logos in your page by using the shortcode: [hm_logo_showcase].
+This HM Logo Showcase is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase].
 
 == Description ==
 
-This [HM Logo Showcase](http://www.hossnimubarak.com) plugin will display Logos in your page by using the shortcode: [hm_logo_showcase].
+This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase].
 
 **🌟 Plugin Features:**
 
