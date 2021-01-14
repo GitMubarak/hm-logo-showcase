@@ -3,7 +3,7 @@
  * Plugin Name: 	HM Logo Showcase
  * Plugin URI:		http://wordpress.org/plugins/hm-logo-showcase/
  * Description: 	This is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase]
- * Version: 		1.0
+ * Version: 		1.1
  * Author: 			Hossni Mubarak
  * Author URI: 		http://www.hossnimubarak.com
  * License:         GPL-2.0+
@@ -18,7 +18,7 @@ define('HMLS_SLUG', plugin_basename(__FILE__));
 define('HMLS_PRFX', 'hmls_');
 define('HMLS_CLS_PRFX', 'cls-hmls-');
 define('HMLS_TXT_DOMAIN', 'hm-logo-showcase');
-define('HMLS_VERSION', '1.0');
+define('HMLS_VERSION', '1.1');
 
 require_once HMLS_PATH . 'inc/' . HMLS_CLS_PRFX . 'master.php';
 $hmls = new HMLS_Master();
