@@ -35,7 +35,7 @@ This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin w
 
 
 **Demo / Support/ Live Chat**
-[HM Logo Showcase: See Demo](http://plugin.hossnimubarak.com/wp-display-faq/)
+[HM Logo Showcase: See Demo](https://demo.hmplugin.com/hm-logo-showcase/)
 
 
 **📋 Feedback/Rating:**
