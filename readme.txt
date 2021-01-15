@@ -28,6 +28,7 @@ This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin w
 * Logo Url Option
 * Logo Status Active/Inactive Option
 * Category wise logo display option
+* Logo column number option for desktop (Grid layout)
 
 
 ➡️ Useage of Shortcode:⬅️
@@ -101,6 +102,10 @@ Please go to Admin -> HM Logos menu and Add your Logo. Copy the Shorcode [hm_log
 
 
 == Changelog ==
+
+= 1.2 =
+* Image responsive issue fixed for Chrome
+* Grid column number option for desktop added
 
 = 1.1 =
 * Logo url option added

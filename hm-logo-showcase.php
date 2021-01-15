@@ -4,8 +4,8 @@
  * Plugin URI:		http://wordpress.org/plugins/hm-logo-showcase/
  * Description: 	This is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase]
  * Version: 		1.2
- * Author: 			Hossni Mubarak
- * Author URI: 		http://www.hossnimubarak.com
+ * Author: 			HM Plugin
+ * Author URI: 		http://hmplugin.com
  * License:         GPL-2.0+
  * License URI:     http://www.gnu.org/licenses/gpl-2.0.txt
 */

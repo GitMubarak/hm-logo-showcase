@@ -3,12 +3,11 @@
     display: grid;
     grid-gap: 0px;
     padding: 0px;
-    grid-template-columns: repeat(5, 1fr);
 }
 
-.hmls-logo-main-wrapper .hmls-logo-item {
+.hmls-logo-main-wrapper>.hmls-logo-item {
     border: 1px solid #DDD;
-    min-height: 150px;
+    height: 150px;
     margin-right: 0px;
     margin-bottom: 0px;
     /* box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15); */
@@ -20,7 +19,7 @@
     transition: all .5s;
 }
 
-.hmls-logo-main-wrapper .hmls-logo-item:hover {
+.hmls-logo-main-wrapper>.hmls-logo-item:hover {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     -ms-transform: scale(1.2);
     -moz-transform: scale(1.2);
@@ -35,6 +34,9 @@
     text-decoration: none !important;
     outline: none !important;
     border: none !important;
+    height: 150px;
+    border: 0px solid #000!important;
+    display: inline-block;
 }
 
 .hmls-logo-main-wrapper>.hmls-logo-item>a>img {
@@ -42,10 +44,26 @@
     display: block;
     position: relative;
     right: 20px;
-    top: 50%;
+    /*top: 50%;*/
     right: -50%;
-    transform: translate(-50%, -50%);
-    height: 150px;
+    transform: translate(-50%, 35px);
+    height: 80px;
+    width: auto;
+}
+
+@media only screen and (min-width: 1025px) {
+    .hmls-logo-main-wrapper.hmls-cols-desktop-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .hmls-logo-main-wrapper.hmls-cols-desktop-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    .hmls-logo-main-wrapper.hmls-cols-desktop-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .hmls-logo-main-wrapper.hmls-cols-desktop-5 {
+        grid-template-columns: repeat(5, 1fr);
+    }
 }
 
 @media only screen and (max-width: 500px) {
@@ -55,7 +73,8 @@
     .hmls-logo-main-wrapper>.hmls-logo-item>a>img {
         display: block;
         position: relative;
-        transform: translate(-50%, 0%);
-        height: 150px;
+        right: -50%;
+        transform: translate(-50%, 50%);
+        height: 70px;
     }
 }

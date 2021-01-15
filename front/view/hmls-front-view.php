@@ -1,5 +1,9 @@
 <?php
 global $post;
+
+$hmlsGridSettings   = stripslashes_deep( unserialize( get_option('hmls_grid_settings') ) );
+$hmls_cols_desktop  = isset( $hmlsGridSettings['hmls_cols_desktop'] ) ? $hmlsGridSettings['hmls_cols_desktop'] : 4;
+
 // Shortcoded Options
 $hmlsCategory  = isset( $hmlsAttr['category'] ) ? $hmlsAttr['category'] : '';
 
@@ -32,7 +36,7 @@ $hmls_logos = new WP_Query( $hmls_arr );
 
 if ( $hmls_logos->have_posts() ) {
   ?>
-  <div class="hmls-logo-main-wrapper">
+  <div class="hmls-logo-main-wrapper <?php echo esc_attr( 'hmls-cols-desktop-' . $hmls_cols_desktop ); ?>">
     <?php while( $hmls_logos->have_posts() ) : $hmls_logos->the_post(); ?>
     <div class="hmls-logo-item">
       <?php
