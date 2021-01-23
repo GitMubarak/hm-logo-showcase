@@ -1,10 +1,10 @@
 === HM Logo Showcase ===
-Contributors: mhmrajib
+Contributors: mhmrajib, hmplugin
 Donate link: https://www.paypal.me/mhmrajib
 Tags: logo, logo showcase, sponsors, brand logo, logo slider
 Requires at least: 4.6
 Tested up to: 5.6
-Stable tag: 1.2
+Stable tag: 1.3
 Requires PHP: 5.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,7 +13,7 @@ This HM Logo Showcase is a logo manager plugin which will display client/brand l
 
 == Description ==
 
-This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase].
+This [HM Logo Showcase](https://hmplugin.com) is a logo manager plugin which will display client/brand logos on your website page by using the shortcode: [hm_logo_showcase].
 
 
 **🌟 Plugin Features:**
@@ -43,15 +43,16 @@ This [HM Logo Showcase](http://www.hossnimubarak.com) is a logo manager plugin w
 
 
 
-**Demo / Support/ Live Chat**
+**👨‍💻 Demo / Support/ Live Chat**
 [HM Logo Showcase: See Demo](https://demo.hmplugin.com/hm-logo-showcase/)
 
 
-**📋 Feedback/Rating:**
+**👍 Feedback/Rating:**
 If you find this plugin helpful, feel free to give us your valuable review. Rate us and share this plugin with your friends and others. This will motivate us and help us to grow.
+[Rate Us](https://wordpress.org/support/plugin/hm-simple-facebook-page/reviews/#new-post)
 
 
-**🔥 Other Plugins from [HM Plugin](http://www.hossnimubarak.com)**
+**🔥 Other Plugins from [HM Plugin](https://hmplugin.com)**
 
 👉 [WP Books Gallery](https://wordpress.org/plugins/wp-books-gallery/) Books Gallery Plugin for WordPress
 👉 [Worldwide Breaking News Headlines](https://wordpress.org/plugins/worldwide-breaking-news-headlines/) Breaking News, Headlines Widget Plugin for WordPress
@@ -102,6 +103,9 @@ Please go to Admin -> HM Logos menu and Add your Logo. Copy the Shorcode [hm_log
 
 
 == Changelog ==
+
+= 1.3 =
+* Image responsive issue fixed for Chrome
 
 = 1.2 =
 * Image responsive issue fixed for Chrome
