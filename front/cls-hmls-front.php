@@ -1,4 +1,6 @@
 <?php
+if ( ! defined('ABSPATH') ) exit;
+
 /**
 *	Front Parent Class
 */
@@ -12,15 +14,29 @@ class HMLS_Front {
 	
 	function hmls_front_assets() {
 		
-		wp_enqueue_style(	'hmls-front-style',
-							HMLS_ASSETS . 'css/' . $this->hmls_assets_prefix . 'front-style.css',
-							array(),
-							$this->hmls_version,
-							FALSE );
+		wp_enqueue_style( 'hmls-front-style', 
+			HMLS_ASSETS . 'css/' . $this->hmls_assets_prefix . 'front-style.css',
+			array(),
+			$this->hmls_version,
+			FALSE 
+		);
+
+		wp_enqueue_style( 'hmls-rcbrand-style', 
+			HMLS_ASSETS . 'css/' . $this->hmls_assets_prefix . 'rcbrand-style.css',
+			array(),
+			$this->hmls_version,
+			FALSE 
+		);
 		
 		if( ! wp_script_is( 'jquery' ) ) {
 			wp_enqueue_script('jquery');
 		}
+
+		wp_enqueue_script(  'hmls-jquery.rcbrand',
+							HMLS_ASSETS . 'js/' . $this->hmls_assets_prefix . 'jquery.rcbrand.js',
+							array('jquery'),
+							$this->hmls_version,
+							TRUE );
 
 		wp_enqueue_script(  'hmls-front-script',
 							HMLS_ASSETS . 'js/' . $this->hmls_assets_prefix . 'front-script.js',

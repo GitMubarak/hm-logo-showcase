@@ -5,7 +5,9 @@ $hmlsGridSettings   = stripslashes_deep( unserialize( get_option('hmls_grid_sett
 $hmls_cols_desktop  = isset( $hmlsGridSettings['hmls_cols_desktop'] ) ? $hmlsGridSettings['hmls_cols_desktop'] : 4;
 
 // Shortcoded Options
-$hmlsCategory  = isset( $hmlsAttr['category'] ) ? $hmlsAttr['category'] : '';
+$hmlsCategory = isset( $hmlsAttr['category'] ) ? $hmlsAttr['category'] : '';
+$hmlsDisplay  = isset( $hmlsAttr['display'] ) ? $hmlsAttr['display'] : '';
+$hmlsLayout   = isset( $hmlsAttr['layout'] ) ? $hmlsAttr['layout'] : '';
 
 $hmls_arr = array(
                   'post_type' => 'hmls_logo',
@@ -32,30 +34,24 @@ if ( $hmlsCategory ) {
                                   );
 }
 
+// If display params found in shortcode
+if ( $hmlsDisplay ) {
+  $hmls_arr['posts_per_page'] = $hmlsDisplay;
+}
+
 $hmls_logos = new WP_Query( $hmls_arr );
 
 if ( $hmls_logos->have_posts() ) {
-  ?>
-  <div class="hmls-logo-main-wrapper <?php echo esc_attr( 'hmls-cols-desktop-' . $hmls_cols_desktop ); ?>">
-    <?php while( $hmls_logos->have_posts() ) : $hmls_logos->the_post(); ?>
-    <div class="hmls-logo-item">
-      <?php
-        $hmls_logo_url = get_post_meta( $post->ID, 'hmls_logo_url', true );
-        ?>
-        <a href="<?php echo esc_url( $hmls_logo_url ); ?>" target="_blank">
-        <?php
-          if ( has_post_thumbnail() ) {
-            the_post_thumbnail();
-          } else { ?>
-            <img src="<?php echo esc_attr( HMLS_ASSETS . 'img/noimage.jpg' ); ?>" alt="<?php esc_attr_e( 'No Logo Found', HMLS_TXT_DOMAIN ); ?>">
-          <?php
-          }
-        ?>
-        </a>
-    </div>
-    <?php endwhile; ?>
-  </div>
-  <?php
+
+  // If layout params found in shortcode
+  if ( $hmlsLayout ) {
+    if ( 'grid' === $hmlsLayout ) {
+      include HMLS_PATH . 'front/view/layout/hmls-display-grid.php';
+    }
+    if ( 'slide' === $hmlsLayout ) {
+      include HMLS_PATH . 'front/view/layout/hmls-display-slide.php';
+    }
+  }
 }
 /* Restore original Post Data */
 wp_reset_postdata();

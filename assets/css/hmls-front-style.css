@@ -30,7 +30,13 @@
     background: #ffffff;
 }
 
-.hmls-logo-main-wrapper>.hmls-logo-item>a {
+.hmls-slide-wrapper>.hmls-slide-item {
+    height: 150px;
+    border: 0px solid #DDD;
+}
+
+.hmls-logo-main-wrapper>.hmls-logo-item>a,
+.hmls-slide-wrapper>.hmls-slide-item>a {
     text-decoration: none !important;
     outline: none !important;
     border: none !important;
@@ -43,12 +49,21 @@
     border: 0px solid #FF0000;
     display: block;
     position: relative;
-    right: 20px;
     /*top: 50%;*/
     right: -50%;
     transform: translate(-50%, 35px);
     height: 80px;
     width: auto;
+}
+
+.hmls-slide-wrapper>.hmls-slide-item>a>img {
+    border: 0px solid #FF0000;
+    display: block;
+    position: relative;
+    height: 80px;
+    width: auto;
+    right: -50%;
+    transform: translate(-50%, 35px);
 }
 
 @media only screen and (min-width: 1025px) {

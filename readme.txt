@@ -29,6 +29,8 @@ This [HM Logo Showcase](https://hmplugin.com) is a logo manager plugin which wil
 * Logo Status Active/Inactive Option
 * Category wise logo display option
 * Logo column number option for desktop (Grid layout)
+* Control total number of items via shortcode
+* Two Layouts: Slider and Grid
 
 
 ➡️ Useage of Shortcode:⬅️
@@ -40,6 +42,10 @@ This [HM Logo Showcase](https://hmplugin.com) is a logo manager plugin which wil
 <strong> Display Logo from a category </strong>
 
 <pre> [hm_logo_showcase category="category-slug-here"] </pre>
+
+<strong> Display a certain number of logos </strong>
+
+<pre> [hm_logo_showcase display=5] </pre>
 
 
 
@@ -105,7 +111,10 @@ Please go to Admin -> HM Logos menu and Add your Logo. Copy the Shorcode [hm_log
 == Changelog ==
 
 = 1.3 =
-* Image responsive issue fixed for Chrome
+* Logo slider layout introduced
+* Display params added in shortcode
+* Layout params added in shortcode
+* Code optimized and minor bug fixed
 
 = 1.2 =
 * Image responsive issue fixed for Chrome
